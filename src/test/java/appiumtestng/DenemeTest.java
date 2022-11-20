@@ -50,7 +50,7 @@ public class DenemeTest {
 
 
         } catch (MalformedURLException test){
-            System.out.println("Hatalı giriş bilgisi!");
+            System.out.println("HATA");
         }
     }
 
