@@ -9,6 +9,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import javax.xml.datatype.Duration;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
@@ -26,6 +27,7 @@ public class DenemeTest {
     By kodGonderButon = By.id("mobi.appcent.apponte:id/btnSendCode");
 
     By otpGonderButon = By.id("mobi.appcent.apponte:id/btnOTPContinue");
+
 
 
     @BeforeTest
@@ -59,12 +61,26 @@ public class DenemeTest {
 
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 
-        WebElement kurumsalSecim = driver.findElement(kurumsalButon);
-        kurumsalSecim.click();
+       // WebElement kurumsalSecim = driver.findElement(kurumsalButon);
+        driver.findElement(By.id("mobi.appcent.apponte:id/btnInstitutional")).click();
+       // kurumsalSecim.click();
 
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 
         WebElement girisYapSecim = driver.findElement(girisYapButon);
         girisYapSecim.click();
+
+        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+
+        WebElement telefon= driver.findElement(telefonNoButon);
+        telefon.click();
+        driver.getKeyboard().pressKey("5437709118");
+        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+
+        WebElement kod = driver.findElement(kodGonderButon);
+        kod.click();
+
+
+
     }
 }
