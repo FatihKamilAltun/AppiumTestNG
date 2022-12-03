@@ -61,7 +61,6 @@ public class DenemeTest {
 
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 
-       // WebElement kurumsalSecim = driver.findElement(kurumsalButon);
         driver.findElement(By.id("mobi.appcent.apponte:id/btnInstitutional")).click();
        // kurumsalSecim.click();
 
