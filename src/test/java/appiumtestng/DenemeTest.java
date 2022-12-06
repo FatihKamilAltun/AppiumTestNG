@@ -50,7 +50,6 @@ public class DenemeTest {
             driver = new AndroidDriver<WebElement>(new URL("http://127.0.0.1:4723/wd/hub"), cap);
             wait = new WebDriverWait(driver, 10);
 
-
         } catch (MalformedURLException test){
             System.out.println("HATA");
         }
